@@ -9,7 +9,7 @@ public class DBconnection{
 	public Connection getConnection(){
 	String user = "root";
 	String password = "1234567890p";
-	String url = "jdbc:mysql://localhost:3306/school";
+	String url = "jdbc:mysql://localhost:3306/samaritan";
 	
 	try {
 		Class.forName("com.mysql.cj.jdbc.Driver");

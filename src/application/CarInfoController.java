@@ -2,7 +2,10 @@
 package application;
 
 import java.io.IOException;
+import javafx.scene.Node;
 import java.net.URL;
+import java.sql.Connection;
+import java.sql.ResultSet;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -36,6 +39,9 @@ public class CarInfoController implements Initializable {
 	@FXML
 	private Label insurance_left_field;
 	
+	DBconnection c = new DBconnection();
+	Connection con = c.getConnection();
+	
 	@FXML
 	private void onAccident(ActionEvent event) {
 		
@@ -46,15 +52,15 @@ public class CarInfoController implements Initializable {
 		
 	}
 	
-	public void show() {
+	public void show(ActionEvent event) {
 		Parent root;
         try {
         	FXMLLoader loader = new FXMLLoader(getClass().getResource("car_info.fxml"));
             root = loader.load();
             
-            loader.getController();
+           // loader.getController();
                        
-            Stage stage = new Stage(); //(Stage)((Node)(event.getSource())).getScene().getWindow();
+            Stage stage = (Stage)((Node)(event.getSource())).getScene().getWindow();
             stage.setScene(new Scene(root, 600, 400));
             stage.show();
             
@@ -69,7 +75,28 @@ public class CarInfoController implements Initializable {
 
 	@Override
 	public void initialize(URL arg0, ResourceBundle arg1) {
-		// TODO Auto-generated method stub
+		
+		try {
+			ResultSet r = con.createStatement().executeQuery("select * from car where license_number = '"+license_number_field.getText()+"' ");
+			ResultSet s = con.createStatement().executeQuery("select * from insurance where license_number = '"+license_number_field.getText()+"'");
+			ResultSet q = con.createStatement().executeQuery("select * from accident where license_number = '"+license_number_field.getText()+"'");
+			while(r.next()) {
+				type_field.setText("type");
+				company_field.setText(r.getString("company"));
+				date_field.setText(r.getDate("date_added").toString());
+				owner_field.setText(" '"+r.getInt("owner")+"' ");
+				driver_field.setText(" '"+r.getInt("driver")+"' ");
+				accident_field.setText(" '"+q.getInt("acc_id")+"' ");
+				insurance_paid_field.setText("'"+s.getDouble("amount")+"'");
+			}
+		}catch(Exception e) {
+			e.printStackTrace();
+		}
+	
+	}
+	
+	public void getCarId(String license) throws IOException {
+		license_number_field.setText(license);
 	
 	}
 }

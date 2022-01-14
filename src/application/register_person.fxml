@@ -27,12 +27,14 @@
       <TextField fx:id="drivers_llicense_no_field" layoutX="123.0" layoutY="188.0" />
       <ComboBox fx:id="sex_field" layoutX="414.0" layoutY="98.0" prefWidth="150.0" />
       <Label layoutX="335.0" layoutY="143.0" text="Tel No" />
-      <Button layoutX="260.0" layoutY="319.0" mnemonicParsing="false" onAction="#onRegisterPerson" prefHeight="34.0" prefWidth="110.0" text="Register Person" />
+      <Button layoutX="260.0" layoutY="337.0" mnemonicParsing="false" onAction="#onRegisterPerson" prefHeight="34.0" prefWidth="110.0" text="Register Person" />
       <Label layoutX="339.0" layoutY="192.0" prefHeight="17.0" prefWidth="70.0" text="Bought Date" />
       <DatePicker fx:id="bought_date_field" layoutX="415.0" layoutY="188.0" prefHeight="25.0" prefWidth="150.0" />
-      <Label layoutX="25.0" layoutY="234.0" text="Place of Purchase" />
-      <TextField fx:id="place_of_purchase" layoutX="123.0" layoutY="230.0" />
+      <Label layoutX="324.0" layoutY="279.0" text="Place of Purchase" />
+      <TextField fx:id="place_of_purchase" layoutX="416.0" layoutY="275.0" />
       <Label layoutX="339.0" layoutY="234.0" text="Supplier" />
       <TextField fx:id="supplier_field" layoutX="415.0" layoutY="230.0" />
+      <ComboBox fx:id="role_field" layoutX="123.0" layoutY="243.0" prefWidth="150.0" />
+      <Label layoutX="27.0" layoutY="247.0" text="Role" />
    </children>
 </AnchorPane>
