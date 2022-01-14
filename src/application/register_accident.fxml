@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="266.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.RegisterAccidentController">
+   <children>
+      <Label layoutX="24.0" layoutY="21.0" prefHeight="34.0" prefWidth="183.0" text="Register Accident">
+         <font>
+            <Font size="23.0" />
+         </font>
+      </Label>
+      <Separator layoutX="24.0" layoutY="64.0" prefHeight="3.0" prefWidth="549.0" />
+      <Label layoutX="24.0" layoutY="102.0" text="Degree" />
+      <Label layoutX="24.0" layoutY="143.0" text="Time" />
+      <Label layoutX="354.0" layoutY="102.0" text="Place" />
+      <TextField fx:id="place_field" layoutX="399.0" layoutY="98.0" />
+      <Button layoutX="245.0" layoutY="211.0" mnemonicParsing="false" onAction="#onRegisterAccident" prefHeight="34.0" prefWidth="110.0" text="Register Accident" />
+      <DatePicker fx:id="time_field" layoutX="123.0" layoutY="139.0" prefHeight="25.0" prefWidth="150.0" />
+      <ComboBox fx:id="degree_field" layoutX="123.0" layoutY="98.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>
