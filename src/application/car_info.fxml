@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.CarInfoController">
+   <children>
+      <Label layoutX="29.0" layoutY="23.0" prefHeight="43.0" prefWidth="135.0" text="Car Info">
+         <font>
+            <Font size="29.0" />
+         </font>
+      </Label>
+      <Separator layoutX="29.0" layoutY="78.0" prefHeight="2.0" prefWidth="522.0" />
+      <Label layoutX="29.0" layoutY="98.0" text="License Number" />
+      <Button layoutX="462.0" layoutY="32.0" mnemonicParsing="false" onAction="#onPayInsurance" text="Pay Insurance" />
+      <Button layoutX="379.0" layoutY="32.0" mnemonicParsing="false" onAction="#onAccident" text="Accident" />
+      <Label layoutX="29.0" layoutY="127.0" text="Type" />
+      <Label layoutX="28.0" layoutY="159.0" text="Company" />
+      <Label layoutX="30.0" layoutY="192.0" text="Date purchased" />
+      <Label layoutX="340.0" layoutY="98.0" text="Model" />
+      <Label layoutX="340.0" layoutY="127.0" text="Owner" />
+      <Label layoutX="28.0" layoutY="305.0" text="Insurance Paid" />
+      <Label layoutX="29.0" layoutY="329.0" text="Number of accidents" />
+      <Label layoutX="29.0" layoutY="354.0" text="Insurance left after accidents" />
+      <Label layoutX="25.0" layoutY="243.0" text="Other Info">
+         <font>
+            <Font size="24.0" />
+         </font>
+      </Label>
+      <Separator layoutX="25.0" layoutY="284.0" prefHeight="3.0" prefWidth="531.0" />
+      <Label fx:id="license_number_field" layoutX="136.0" layoutY="98.0" text="label" />
+      <Label fx:id="type_field" layoutX="136.0" layoutY="127.0" text="Label" />
+      <Label fx:id="company_field" layoutX="136.0" layoutY="159.0" text="Label" />
+      <Label fx:id="date_field" layoutX="136.0" layoutY="192.0" text="Label" />
+      <Label layoutX="342.0" layoutY="159.0" text="Driver" />
+      <Label fx:id="model_field" layoutX="396.0" layoutY="98.0" text="Label" />
+      <Label fx:id="owner_field" layoutX="396.0" layoutY="127.0" text="Label" />
+      <Label fx:id="driver_field" layoutX="396.0" layoutY="159.0" text="Label" />
+      <Label fx:id="insurance_paid_field" layoutX="225.0" layoutY="305.0" text="Label" />
+      <Label fx:id="accident_field" layoutX="225.0" layoutY="329.0" text="Label" />
+      <Label fx:id="insurance_left_field" layoutX="225.0" layoutY="354.0" text="Label" />
+   </children>
+</AnchorPane>
